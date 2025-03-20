@@ -1,0 +1,89 @@
+{
+  "UserInfo": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "user1",
+      "role": "member"
+    },
+    {
+      "id": "2",
+      "name": "admin1",
+      "email": "admin1@gmail.com",
+      "password": "admin1",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "name": "pm1",
+      "email": "pm1@gmail.com",
+      "password": "pm1",
+      "role": "pm"
+    },
+    {
+      "id": "a2d4",
+      "name": "shahi",
+      "email": "shahi@gmail.com",
+      "password": "shahi",
+      "role": "DEVELOPER"
+    },
+    {
+      "id": "65f0",
+      "name": "neha",
+      "email": "neha@gmail.com",
+      "password": "neha",
+      "role": "PM"
+    },
+    {
+      "id": "b456",
+      "name": "sneha",
+      "email": "sneha@gmail.com",
+      "password": "sneha",
+      "role": "PM"
+    }
+  ],
+  "Project": [
+    {
+      "id": "1",
+      "name": "Task Manager",
+      "pm": "1"
+    },
+    {
+      "id": "2",
+      "name": "Food Delivery",
+      "pm": ""
+    },
+    {
+      "id": "3",
+      "name": "Ride It",
+      "pm": ""
+    }
+  ],
+  "ProjectMember": [
+    {
+      "id": "1",
+      "projid": "1",
+      "memid": "1"
+    }
+  ],
+  "Task": [
+    {
+      "id": "1",
+      "projid": "1",
+      "title": "Analysis",
+      "tasktype": "ACTIVITY",
+      "assignedTto": "1",
+      "status": "ACTIVE"
+    }
+  ],
+  "Comment": [
+    {
+      "id": "1",
+      "taskid": "1",
+      "commentby": "1",
+      "title": "Analysis",
+      "description": "Work In Progress"
+    }
+  ]
+}
