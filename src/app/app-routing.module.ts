@@ -5,12 +5,13 @@ import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.com
 import { PmDashBoardComponent } from './pm-dash-board/pm-dash-board.component';
 import { MemberDashBoardComponent } from './member-dash-board/member-dash-board.component';
 import { AddnewuserComponent } from './addnewuser/addnewuser.component';
+import { myrouteGuard } from './myroute.guard';
 
 const routes: Routes = [
   {path:"login", component:AccountsComponent},
-  {path:'admindashboard', component:AdminDashBoardComponent},
-  {path:'pmdashboard', component:PmDashBoardComponent},
-  {path:'memberdashboard', component:MemberDashBoardComponent},
+  {path:'admindashboard', component:AdminDashBoardComponent, canActivate:[myrouteGuard],data:{reqRole:['ADMIN']}},
+  {path:'pmdashboard', component:PmDashBoardComponent,canActivate:[myrouteGuard],data:{reqRole:['PM']}},
+  {path:'memberdashboard', component:MemberDashBoardComponent,canActivate:[myrouteGuard],data:{reqRole:['DEV', 'QA']}},
   {path:'addnewuser', component:AddnewuserComponent},
   {path:'', redirectTo:'login', pathMatch:'full'}
 ];

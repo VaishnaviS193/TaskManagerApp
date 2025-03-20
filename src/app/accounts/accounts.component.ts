@@ -36,16 +36,20 @@ export class AccountsComponent {
           console.log("Success");
 
           sessionStorage.setItem('LoggedInUserData', JSON.stringify(FilterObj));
+          console.log("worked?");
           switch(FilterObj.role.toUpperCase()){
             case 'ADMIN':{
+              console.log("admin check");
               this.router.navigate(['admindashboard']);
               break;
             }
             case 'PM':{
+              console.log("pm check");
               this.router.navigate(['pmdashboard']);
               break;
             }
             case 'MEMBER':{
+              console.log("member check");
               this.router.navigate(['memberdashboard']);
               break;
             }
