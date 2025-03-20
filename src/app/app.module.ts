@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountsComponent } from './accounts/accounts.component';
+import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.component';
+import { PmDashBoardComponent } from './pm-dash-board/pm-dash-board.component';
+import { MemberDashBoardComponent } from './member-dash-board/member-dash-board.component';
+import { AddnewuserComponent } from './addnewuser/addnewuser.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccountsComponent,
+    AdminDashBoardComponent,
+    PmDashBoardComponent,
+    MemberDashBoardComponent,
+    AddnewuserComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
