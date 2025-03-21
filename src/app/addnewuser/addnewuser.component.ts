@@ -46,7 +46,7 @@ export class AddnewuserComponent {
 
     this.srv.AddNewUser(newObj).subscribe({
       next:(res)=>{
-      console.log("New User Added"+res.id);
+      console.log("New User Added",res.id);
       this.router.navigate(['admindashboard']);
       },
       error:(err)=>{

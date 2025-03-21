@@ -12,7 +12,11 @@
                         Name
                     </th>
                     <th>
-                        project Manager
+                        Members
+                    </th>
+                   
+                    <th>
+                        Tasks
                     </th>
                     <th>
                         Actions
@@ -25,19 +29,16 @@
                     <td >
                         {{p.name}}
                     </td>
-                    <td *ngIf="p.pm==''">
-                        <select >
-                            <option *ngFor="let pm of pmList" [value]="pm.name">{{pm.name}}</option>
-                        </select>
-                        <button>Assign</button>
+                    <td>
+                        <button *ngIf="p.id!=undefined" (click)="GetMembersForProject(p.id)">Show Members</button>
+                        <ul *ngIf="selectedProjectId === p.id">
+                            <li *ngFor="let member of selectedProjectMembers">{{member.memid}}</li>
+                        </ul>
                     </td>
-                    <td *ngIf="p.pm!=''">
-                        
-                        {{p.pm}}
+                    <td>
                     </td>
-                    
                         <div>
-                            <button >Delete</button> | <button>Edit</button>
+                            <button *ngIf="p.id!=null"(click)="NavigateToAssignMembers(p.id)">Assign Members</button> | <button *ngIf="p.id!=null"(click)="NavigateToAddTask(p.id)">Add tasks</button>
                         </div>
                     </tr>
                                

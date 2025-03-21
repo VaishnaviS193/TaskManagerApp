@@ -13,6 +13,10 @@ import { MemberDashBoardComponent } from './member-dash-board/member-dash-board.
 import { AddnewuserComponent } from './addnewuser/addnewuser.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { AddnewprojectComponent } from './addnewproject/addnewproject.component';
+import { PmProjectListComponent } from './pm-project-list/pm-project-list.component';
+import { AssignmembersComponent } from './assignmembers/assignmembers.component';
+import { AddnewtaskComponent } from './addnewtask/addnewtask.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { ProjectListComponent } from './project-list/project-list.component';
     AddnewuserComponent,
     UserListComponent,
     ProjectListComponent,
+    AddnewprojectComponent,
+    PmProjectListComponent,
+    AssignmembersComponent,
+    AddnewtaskComponent,
   ],
   imports: [
     BrowserModule,

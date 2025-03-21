@@ -14,4 +14,8 @@ export class AdminDashBoardComponent {
   NavigateToAddNewUser(){
       this.router.navigate(['addnewuser']);
   }
+
+  NavigateToAddNewProject(){ 
+      this.router.navigate(['addnewproject']);
+  }
 }

@@ -1,0 +1,24 @@
+<h2>Add New task</h2>
+<hr/>
+<form [formGroup]="frmGroup" (ngSubmit)="OnAddClick()">
+    <div>
+        <input type="text" formControlName="title"/>
+    </div>
+    <div>
+        <input type="text" formControlName="tasktype"/>
+    </div>
+    <div>
+        <select formControlname="assignedTo">
+            <option *ngfor="Let m in existingMemberNames" [value]="m">{{m}}</option>
+        </select>
+    </div>
+    <div>
+        <select formControlname="status">
+            <option value="ACTIVE">ACTIVE</option>
+            <option value="COMPLETED">COMPLETED</option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+</form>

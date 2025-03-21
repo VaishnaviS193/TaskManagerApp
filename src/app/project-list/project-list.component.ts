@@ -11,7 +11,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: './project-list.component.html',
   styleUrl: './project-list.component.css'
 })
-export class ProjectListComponent {
+export class ProjectListComponent implements OnInit{
   projectList:Project[]=[];
   pmList:UserInfo[]=[];
   
